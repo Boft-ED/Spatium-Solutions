@@ -1,0 +1,42 @@
+<article id="article2" class="system">
+
+        <span class="textH1">
+        Системные затраты
+    </span>
+
+    <label>
+        Дни полёта
+        <input type="text" class="daysOFflight"/>
+    </label>
+    <label>
+        Членов экипажа
+        <input type="text" class="crewMembers" />
+    </label>
+
+    <div class="button-text"><input type="button" name="send" value="Рассчитать" class="button3"/></div>
+    <div class="result-area"><label>Кислород:</label><input id="oxygenSys" type="text" name="result" placeholder="Ответ"/></div>
+    <div class="result-area"><label>Питьевая вода:</label><input id="WaterBottle" type="text" name="result" placeholder="Ответ"/></div>
+    <div class="result-area"><label>Вода для личной гигиены космонавтов:</label><input id="WaterGigiena" type="text" name="result" placeholder="Ответ"/></div>
+
+    <span class="arrow-back">
+    &#x219A;
+</span>
+    <script type="text/javascript">
+
+            $("input[name=send]").click(function () { // Событие нажатия на кнопку "Расчёт"
+                var firstValues = $(".daysOFflight").val();
+                var secondValues = $(".crewMembers").val();
+                var stable = firstValues * secondValues;
+                var result1 = stable * 0.906;
+                var result2 = stable * 3.624;
+                var result3 = stable * 5.436;
+                $("input[id=oxygenSys]").val(result1); // записываем результат
+                $("input[id=WaterBottle]").val(result2); // записываем результат
+                $("input[id=WaterGigiena]").val(result3); // записываем результат
+
+            });
+
+    </script>
+</article>
+
+<script src="js/page.js"></script>

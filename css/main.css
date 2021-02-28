@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    font-family: Roboto;
+    cursor: crosshair;
+}
+
+span {
+    cursor: w-resize;
+}
+
+li {
+    cursor: pointer;
+}
+
+.img-background {
+    background-image: url(img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.logo > a > img {
+    width: 100%;
+    margin-top: 20%;
+    margin-bottom: 35%;
+}
+
+.logo > a > img:last-child {
+    margin-bottom: 10%;
+}
+
+header {
+    display: inline-block;
+    width: 5%;
+    margin-left: 2%;
+    background-color: #ffffffcf;
+    border-radius: 0 0 25px 25px;
+    padding: 1%;
+    float: left;
+}
+
+header > img {
+    display: block;
+}
+
+nav {
+    float: right;
+    margin: 3% 10% 0 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    color: #ffffffba;
+    padding: 0 15px;
+    font-weight: bold;
+    font-size: 17px;
+    transition: .5s;
+}
+
+.system label {
+    margin: 1% 0;
+}
+
+.medic1 .text {
+    position: inherit;
+}
+
+nav ul li:hover {
+    color: white;
+    transition: .5s;
+}
+
+#article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    color: white;
+    letter-spacing: 10px;
+    font-size: 7rem;
+}
+
+h1:after {
+    content: "Подсчёта веса для отправки в космос";
+    position: absolute;
+    left: 115px;
+    top: 30px;
+    font-size: 20px;
+    letter-spacing: 9px;
+}
+
+h1:first-letter {
+    font-size: 150px;
+}
+
+footer span:last-child {
+    position: absolute;
+    right: 10%;
+    bottom: 10px;
+    color: white;
+    font-weight: 200;
+    font-size: 13px;
+}
+
+.symphol {
+    color: white;
+    margin-left: 5%;
+    transition: 1s;
+}
+
+.svg-shape {
+    position: absolute;
+    top: 75%;
+    left: 6%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.symphol span {
+    font-size: 2rem;
+}
+
+.button {
+    transition: .2s;
+}
+
+.arrow {
+    padding-left: 0px;
+    transition: .2s;
+}
+
+.frame {
+    z-index: -1;
+}
+
+.frame-mobile {
+    display: none;
+}
+
+svg#play {
+    width: 100px;
+    margin: 120px auto;
+    display: block;
+    cursor: pointer;
+    transform-origin: 50% 50%;
+}
+svg#play #triangle {
+    fill: rgba(22, 22, 22, 0);
+    transition: 500ms;
+    transform-origin: 50% 50%;
+}
+svg#play:hover #triangle {
+    fill: #a3cd3a;
+    transform-origin: 50% 50%;
+}
+svg #lineOne, svg #lineTwo {
+    transform-origin: 50% 50%;
+    transition: 1s;
+}
+svg:hover #lineOne {
+    transform: rotate(260deg);
+    -webkit-transform: rotate(260deg);
+    -moz-transform: rotate(260deg);
+    -o-transform: rotate(260deg);
+    transform-origin: 50% 50%;
+}
+svg:hover #lineTwo {
+    transform: rotate(-450deg);
+    transform-origin: 50% 50%;
+}
+
+
+@media (max-width: 1200px) {
+    .frame {
+        display: none;
+    }
+    .appscript {
+        display: none;
+    }
+    .frame-mobile {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-image: url(../img/bg.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .svg-shape {
+        display: none;
+    }
+    nav ul li {
+        display: block;
+        font-size: 55px;
+        margin: 40px 0;
+        text-align: center;
+        font-weight: 300;
+    }
+    .img-background {
+        background-position: 77%;
+    }
+}
+@media (max-width: 400px) {
+    body * {
+        font-size: 13px;
+    }
+}

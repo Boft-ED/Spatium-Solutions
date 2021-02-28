@@ -1,0 +1,47 @@
+<article id="article2" class="system">
+
+        <span class="textH1">
+        Человеческие затраты
+    </span>
+
+    <label>
+        Дни полёта
+        <input type="text" class="daysOFflight"/>
+    </label>
+    <label>
+        Членов экипажа
+        <input type="text" class="crewMembers" />
+    </label>
+
+    <div class="button-text"><input type="button" name="send" value="Рассчитать" class="button3"/></div>
+    <div class="result-area"><label>Углексилый газ:</label><input id="oxygenMan" type="text" name="result" placeholder="Ответ"/></div>
+    <div class="result-area"><label>Водяные пары, содержащиеся в воздухе:</label><input id="WaterPar" type="text" name="result" placeholder="Ответ"/></div>
+    <div class="result-area"><label>Грязная вода после умывания:</label><input id="dirtWater" type="text" name="result" placeholder="Ответ"/></div>
+    <div class="result-area"><label>Моча:</label><input id="Urina" type="text" name="result" placeholder="Ответ"/></div>
+    <div class="result-area"><label>Фекальная масса:</label><input id="govno" type="text" name="result" placeholder="Ответ"/></div>
+
+    <span class="arrow-back">
+    &#x219A;
+</span>
+    <script type="text/javascript">
+
+            $("input[name=send]").click(function () { // Событие нажатия на кнопку "Расчёт"
+                var firstValues = $(".daysOFflight").val();
+                var secondValues = $(".crewMembers").val();
+                var stable = firstValues * secondValues;
+                var result1 = stable * 1.019;
+                var result2 = stable * 2.419;
+                var result3 = stable * 5.436;
+                var result4 = stable * 1.450;
+                var result5 = stable * 0.158;
+                $("input[id=oxygenMan]").val(result1); // записываем результат
+                $("input[id=WaterPar]").val(result2); // записываем результат
+                $("input[id=dirtWater]").val(result3); // записываем результат
+                $("input[id=Urina]").val(result4); // записываем результат
+                $("input[id=govno]").val(result5); // записываем результат
+            });
+
+    </script>
+</article>
+
+<script src="js/page.js"></script>

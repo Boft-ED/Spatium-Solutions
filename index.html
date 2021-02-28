@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spatium Solutions</title>
+	<meta name="description"
+		content="Demo of the tutorial on how to create a fake 3D image effect with WebGL shaders." />
+	<meta name="keywords" content="webgl, 3d, image, shader, javascript, tutorial, demo, web development, effect" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+</head>
+
+<body class="demo-1">
+	<main>
+		<div class="frame-mobile"></div>
+		<div class="frame">
+			<div id="gl" data-imageOriginal="img/bg.jpg" data-imageDepth="img/bg-gray.jpg" data-horizontalThreshold="35"
+				data-verticalThreshold="15" crossorigin="anonymous">
+			</div>
+		</div>
+		<img src="" alt="">
+		<header class="logo">
+			<a href="https://www.nasa.gov/" target="_blank">
+				<img src="img/nasa.png" alt="NASA" />
+			</a>
+			<a href="https://www.blueorigin.com/" target="_blank">
+				<img src="img/BlueOrigin.png" alt="BlueOrigin" />
+			</a>
+			<a href="https://www.roscosmos.ru/" target="_blank">
+				<img src="img/roscosmos.png" alt="RosCosmos" />
+			</a>
+			<a href="https://www.spacex.com/" target="_blank">
+				<img src="img/SpaceX.png" alt="SpaceX" />
+			</a>
+		</header>
+		<nav>
+			<ul>
+				<li id="food">Еда</li>
+				<li id="oxygen">Кислород</li>
+				<li id="drinkingWater">Питьевая вода</li>
+				<li id="waterHygiene">Вода (гигиена)</li>
+				<li id="humanCost">Человеческие затраты</li>
+				<li id="systemCost">Системные затраты</li>
+				<li id="fuel">Топливо</li>
+				<li id="Medic">Медикаменты</li>
+			</ul>
+		</nav>
+		<article id="article">
+			<form action="">
+				<h1>Калькулятор</h1>
+				<div class="symphol">
+					<span class="button">
+						Попробуй
+					</span>
+					<span class="arrow">
+						&#8603;
+					</span>
+				</div>
+			</form>
+		</article>
+		<footer>
+			<span>
+				Spatium Solutions &#9400; 2019 &#127829; via nasekin
+			</span>
+		</footer>
+		<span class="help">
+			Совет: при зависании перезагружать страницу сочетанием клавиш ctrl + f5. <br /> WARNING: не кликайте
+			посотянно по пунктам меню - это может привести к поломке!
+		</span>
+	</main>
+	<script class="appscript" src="js/app.js"></script>
+	<script src="js/page.js"></script>
+</body>
+
+</html>

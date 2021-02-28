@@ -1,0 +1,43 @@
+<article id="article2">
+    <span class="text"><h3>Нативно, но эффективно</h3>
+        Т.к человеческий организм склонен к частому потреблению пищи и все питательные вещества занимают немало место на космических кораблях (МКС). Этому есть легкое решение и суть его заключается в одной таблетке.
+        <br />
+        Эта таблетка- позволяющая после ее употребления, удовлетворить вашу потребность в еде на целый день.
+        <br />
+        Парафармацевтика, вот главный секретный ингредиент. Обычная полезная добавка к пище, состоящая из растительных ингредиентов. Она обогащает организм минералами и витаминами. Заменяют полноценный ужин или обед и настолько быстро насыщают организм за счёт целлюлозы, что они разбухают в кишечнике и желудке. После чего желчь блокируется и аппетит уходит.
+        <br />
+        Более промышленному варианту оптимизации, фундаментом будет являться дрожжи. Бесконечные дрожжи, по принципу регенерации и их размножения.
+    </span>
+    <span class="textH1">
+        Еда
+    </span>
+    <label>
+
+        Дни полёта
+        <input type="text" class="daysOFflight"/>
+    </label>
+    <label>
+        Членов экипажа
+        <input type="text" class="crewMembers" />
+    </label>
+
+    <div class="button-text"><input type="button" name="send" value="Рассчитать" class="button3"/></div>
+    <div class="result-area"><label>Результат:</label><input type="text" name="result" placeholder="Ответ"/></div>
+
+    <span class="arrow-back">
+    &#x219A;
+</span>
+    <script type="text/javascript">
+
+            $("input[name=send]").click(function () { // Событие нажатия на кнопку "Расчёт"
+                var firstValues = $(".daysOFflight").val();
+                var secondValues = $(".crewMembers").val();
+                var stable = firstValues * secondValues;
+                var result = stable * 0.589;
+                $("input[name=result]").val(result); // записываем результат
+            });
+
+    </script>
+</article>
+
+<script src="js/page.js"></script>

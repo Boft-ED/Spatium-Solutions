@@ -1,0 +1,42 @@
+<article id="article2">
+    <span class="text">
+Воду можно получать, тщательно фильтруя мочу и перед употреблением добавляя растворимую гранулу/таблетку с пищевыми добавками и минеральными солями.
+        <br />
+Но нужно учитывать, что подобный круговорот не может длиться вечно, так как жидкость выводиться из организма человека не в 100% количестве, а в первую очередь идет на поддержание жизнедеятельности его организма
+        <br />
+Так что вероятно, воду можно брать с близлежащих астероидов в виде льда, но ближе к реальности доставка воды с Земли, во много меньших количествах и много большим кпд ее использования.
+        <br />
+    </span>
+    <span class="textH1">
+        Питьевая вода
+    </span>
+    <label>
+
+        Дни полёта
+        <input type="text" class="daysOFflight"/>
+    </label>
+    <label>
+        Членов экипажа
+        <input type="text" class="crewMembers" />
+    </label>
+
+    <div class="button-text"><input type="button" name="send" value="Рассчитать" class="button3"/></div>
+    <div class="result-area"><label>Результат:</label><input type="text" name="result" placeholder="Ответ"/></div>
+
+    <span class="arrow-back">
+    &#x219A;
+</span>
+    <script type="text/javascript">
+
+            $("input[name=send]").click(function () { // Событие нажатия на кнопку "Расчёт"
+                var firstValues = $(".daysOFflight").val();
+                var secondValues = $(".crewMembers").val();
+                var stable = firstValues * secondValues;
+                var result = stable * 3.624;
+                $("input[name=result]").val(result); // записываем результат
+            });
+
+    </script>
+</article>
+
+<script src="js/page.js"></script>
